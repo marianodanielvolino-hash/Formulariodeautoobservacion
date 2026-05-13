@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Relevamiento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Relevamiento de Sedes</h1>
+            <p>Por favor, complete los datos solicitados. Puede guardar su progreso como borrador y continuar más tarde.</p>
+        </header>
+        
+        <form id="relevamientoForm">
+            <div class="form-group">
+                <label for="sede">Nombre de la Sede</label>
+                <input type="text" id="sede" name="sede" required placeholder="Ej. Sede Central Rosario">
+            </div>
+
+            <div class="form-group">
+                <label for="responsable">Responsable a cargo</label>
+                <input type="text" id="responsable" name="responsable" required placeholder="Nombre completo">
+            </div>
+
+            <div class="form-group">
+                <label for="estado_edificio">Estado general del edificio</label>
+                <select id="estado_edificio" name="estado_edificio" required>
+                    <option value="" disabled selected>Seleccione una opción...</option>
+                    <option value="Excelente">Excelente</option>
+                    <option value="Bueno">Bueno</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Malo">Malo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="observaciones">Observaciones adicionales</label>
+                <textarea id="observaciones" name="observaciones" rows="4" placeholder="Detalles de reparaciones necesarias, etc."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Enviar Relevamiento</button>
+            </div>
+            
+            <div id="statusMessage" class="status-message"></div>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
